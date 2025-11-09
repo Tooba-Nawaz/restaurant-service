@@ -1,0 +1,54 @@
+﻿PREREQUISITES
+
+Before running the project, make sure you have the following installed:
+
+.NET 8 SDK or later
+
+Microsoft SQL Server (local or remote)
+
+SQL Server Management Studio (optional, for viewing the database)
+
+Visual Studio 2022 (v17.8 or higher) or VS Code with C# extension
+
+PROJECT SETUP
+
+Clone the repository:
+git clone <https://github.com/Tooba-Nawaz/restaurant-service>
+
+Restore dependencies:
+dotnet restore
+
+Check or update the connection string in appsettings.json.
+
+DATABASE INITIALIZATION
+
+When you run the project for the first time, EF Core migrations will automatically create the database in your local SQL Server instance.
+
+If you want to create the database manually, use:
+dotnet ef database update
+
+RUNNING THE PROJECT
+
+To run the project, use either Visual Studio (Start/Run) or CLI:
+dotnet run
+
+When the project starts:
+
+The database will be created automatically (if it doesn’t already exist)
+
+The project will start running on:
+https://localhost:44386
+
+ACCESSING THE APIS (SWAGGER UI)
+
+This is a service-only project (no frontend UI).
+If you open the base URL in a browser, you will get a 404 error.
+
+To access and test the APIs:
+
+Open your browser and go to:
+https://localhost:44386/swagger/index.html
+
+You will see all available APIs and services.
+
+Use Swagger to test GET, POST, PUT, and DELETE operations directly.
